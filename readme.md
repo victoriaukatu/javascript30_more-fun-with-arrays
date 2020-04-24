@@ -2,8 +2,8 @@
 
 Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
 
-![](https://javascript30.com/images/JS3-social-share.png)
+![](console.jpg)
 
-SUMMARY:
+SUMMARY: Had fun getting some more reps in with array methods. 🤓 💻
 
 
