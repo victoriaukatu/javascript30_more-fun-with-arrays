@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>More Fun With Arrays!</title>
+  <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-  <h3><em>Nothing to see here...check out the Console!</em></h3>
+  <h2><em>Nothing to see here...check out the Console!</em></h2>
   <img src="cat.jpg">
   <script>
     // ## Array Cardio Day 2
@@ -27,23 +30,41 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
-    // Array.prototype.every() // is everyone 19 or older?
-
     const isOlder = people.some(person => {
       const currentYear = (new Date()).getFullYear();
       return currentYear - person.year >= 19;  // We could do an if statement here, but this is a cleaner way to write it
     });
-
     console.log(isOlder); // This will return true, since "some" is looking for if the condition is met in the people array
+
+    // Array.prototype.every() // is everyone 19 or older?
+    const isEvery = people.every(person => {
+      const currentYear = (new Date()).getFullYear();
+      return currentYear - person.year >= 19;
+    });
+    console.log(isEvery);
+
 
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
-
+    const comment = comments.find(comment => {
+      if (comment.id == 823423) {
+        return comment;
+      }
+    })
+    console.log(comment);
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
+    const index = comments.findIndex(comment =>
+      comment.id == 823423);
+    console.log(index);
+    comments.splice(index, 1);
+    console.log(comments);
+
+    // You can also use slice if you want to keep the original array
 
   </script>
 </body>
+
 </html>
